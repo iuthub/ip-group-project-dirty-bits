@@ -14,5 +14,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
+});
+Route::get('/about', function () {
+    return view('about');
+});
+Route::get('/create', function () {
+    return view('create');
+});
+Route::get('/my-reservations', function () {
+    return view('myReservations');
+});
+Route::get('/reservation-details', function () {
+    return view('reservationDetails');
 });
