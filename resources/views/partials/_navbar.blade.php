@@ -1,6 +1,6 @@
 <header class="container">
 	<nav class="navbar navbar-expand-lg navbar-light">
-		<a class="navbar-brand" href="#">Our Hotel Name</a>
+		<a class="navbar-brand" href="{{ URL::route('/') }}">Our Hotel Name</a>
 		<button class="navbar-toggler active" type="button" data-toggle="collapse" data-target="#navbarContent">
 		<span class="navbar-toggler-icon"></span>
 		</button>

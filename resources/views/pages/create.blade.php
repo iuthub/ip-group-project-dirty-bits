@@ -4,10 +4,9 @@
 <div class="container">
 	<div class="text-center">
 		<h2>Hotel Create Page</h2>
-		<br>
 	</div>
 	<form>
-		<div class="form-row">
+		<div class="form-row mt-4">
 			<div class="form-group col-md-4">
 				<label for="inputName">Hotel Name</label>
 				<input type="text" class="form-control" id="inputName" placeholder="Hiyatt Tashkent">
@@ -130,7 +129,10 @@
 				<label class="form-check-label" for="chargingCheckbox">Electric Vehicle Charging Station</label>
 			</div>
 		</div>
-		<button type="submit" class="btn btn-primary">Create</button>
+		<div class="text-center">
+			<button type="submit" class="btn btn-primary btn-lg w-50">Create</button>
+		</div>
+		
 	</form>
 </div>
 @endsection

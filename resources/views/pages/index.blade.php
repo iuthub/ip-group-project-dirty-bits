@@ -22,7 +22,7 @@
 	</div>
 	<!-- Three Hotel Service Info Cards -->
 	<div class="row centered">
-		<div class="col-md-4">
+		<div class="col-md-4 mb-2">
 			<div class="card limited">
 				<img src="https://q-cf.bstatic.com/images/hotel/max1024x768/227/227030896.jpg" class="card-img-top" alt="...">
 				<div class="card-body">
@@ -31,7 +31,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-md-4">
+		<div class="col-md-4 mb-2">
 			<div class="card limited">
 				<img src="https://q-cf.bstatic.com/images/hotel/max1024x768/224/22443294.jpg" class="card-img-top" alt="...">
 				<div class="card-body">
@@ -40,7 +40,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-md-4">
+		<div class="col-md-4 mb-2">
 			<div class="card limited">
 				<img src="https://storage.googleapis.com/static-content-hc/sites/default/files/cataloina_porto_doble_balcon2_2.jpg" class="card-img-top" alt="...">
 				<div class="card-body">
@@ -51,13 +51,12 @@
 			<br>
 		</div>
 	</div>
-	<br>
 	<div class="wrapper container">
-		<div class="text-center">
+		<div class="text-center mb-3">
 			<h3>Recommendations</h3>
 		</div>
 		<div class="row">
-			<div class="col-lg-6 col-xl-3 limited d-flex align-items-stretch">
+			<div class="col-lg-6 col-xl-3 limited d-flex align-items-stretch mb-2">
 				<div class="card">
 					<img src="https://dubai.in.ua/wp-content/uploads/2011/06/room1.jpg" class="card-img-top" alt="...">
 					<div class="card-body">
@@ -78,11 +77,11 @@
 					</div>
 					<div class="card-body">
 						<a class="card-link dropdown-toggle" href="#collapseHairdresser" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">Show more</a>
-						<a href="#" class="card-link">Book now</a>
+						<a href="{{ URL::route('reservation-details') }}" class="card-link">Book now</a>
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-6 col-xl-3 limited d-flex align-items-stretch">
+			<div class="col-lg-6 col-xl-3 limited d-flex align-items-stretch mb-2">
 				<div class="card">
 					<img src="https://r-cf.bstatic.com/images/hotel/max1024x768/223/223888941.jpg" class="card-img-top" alt="...">
 					<div class="card-body">
@@ -103,11 +102,11 @@
 					</div>
 					<div class="card-body">
 						<a class="card-link dropdown-toggle" href="#collapseCosmetology" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">Show more</a>
-						<a href="#" class="card-link">Book now</a>
+						<a href="{{ URL::route('reservation-details') }}" class="card-link">Book now</a>
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-6 col-xl-3 limited d-flex align-items-stretch">
+			<div class="col-lg-6 col-xl-3 limited d-flex align-items-stretch mb-2">
 				<div class="card">
 					<img src="https://www.atorus.ru/public/ator/data/image/TOP10/4421/4.jpg" class="card-img-top" alt="...">
 					<div class="card-body">
@@ -128,7 +127,7 @@
 					</div>
 					<div class="card-body">
 						<a class="card-link dropdown-toggle" href="#collapseVisage" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">Show more</a>
-						<a href="#" class="card-link">Book now</a>
+						<a href="{{ URL::route('reservation-details') }}" class="card-link">Book now</a>
 					</div>
 				</div>
 			</div>
@@ -153,7 +152,7 @@
 					</div>
 					<div class="card-body">
 						<a class="card-link dropdown-toggle" href="#collapseNail" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">Show more</a>
-						<a href="#" class="card-link">Book now</a>
+						<a href="{{ URL::route('reservation-details') }}" class="card-link">Book now</a>
 					</div>
 				</div>
 			</div>

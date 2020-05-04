@@ -1,10 +1,10 @@
 @extends('layouts.main')
 @section('content')
 <div class="container wrapper">
-	<div class="container">
+	<div class="container-fluid">
 		<img src="https://images.squarespace-cdn.com/content/v1/571fd16a2eeb818946dd69bc/1524859077601-1KZUZ3LYBSYBGIAS6AR6/ke17ZwdGBToddI8pDm48kKp-j4Y7usviUHM84CP5xykUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKc9id68ACPh8uSEU4s3d56puG21gnbeYsdaDHel6baV-XbRUaJ30JOieFWjhd813wZ/Teal_Gate_Studio_Creative+Portrait+%282+of+2%29.jpg?format=1500w" class="img-fluid" alt="Responsive image">
 	</div>
-	<div class="jumbotron">
+	<div class="jumbotron mt-4">
 		<div class="row">
 			<div class="col-md-6">
 				<h1 class="display-4">We are Family!</h1>

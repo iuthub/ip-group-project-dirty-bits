@@ -2,11 +2,11 @@
 @section('content')
 <!-- My Reservations -->
 <div class="wrapper container">
-	<div class="text-center">
+	<div class="text-center mb-3">
 		<h3>My Reservations</h3>
 	</div>
 	<div class="row">
-		<div class="col-lg-6 col-xl-3 limited d-flex align-items-stretch">
+		<div class="col-lg-6 col-xl-3 limited d-flex align-items-stretch mb-2">
 			<div class="card">
 				<img src="https://dubai.in.ua/wp-content/uploads/2011/06/room1.jpg" class="card-img-top" alt="...">
 				<div class="card-body">
@@ -31,7 +31,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-lg-6 col-xl-3 limited d-flex align-items-stretch">
+		<div class="col-lg-6 col-xl-3 limited d-flex align-items-stretch mb-2">
 			<div class="card">
 				<img src="https://r-cf.bstatic.com/images/hotel/max1024x768/223/223888941.jpg" class="card-img-top" alt="...">
 				<div class="card-body">
@@ -56,7 +56,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-lg-6 col-xl-3 limited d-flex align-items-stretch">
+		<div class="col-lg-6 col-xl-3 limited d-flex align-items-stretch mb-2">
 			<div class="card">
 				<img src="https://www.atorus.ru/public/ator/data/image/TOP10/4421/4.jpg" class="card-img-top" alt="...">
 				<div class="card-body">
