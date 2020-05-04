@@ -28,3 +28,6 @@ Route::get('/my-reservations', function () {
 Route::get('/reservation-details', function () {
     return view('pages.reservationDetails');
 })->name('reservation-details');
+Route::get('/error', function () {
+    return view('pages.error');
+})->name('error');
