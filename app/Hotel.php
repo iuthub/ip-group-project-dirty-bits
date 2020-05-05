@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Hotel extends Model
 {
   protected $fillable = [
-  	'name', 'rating', 'website', 'description', 'adress', 'country', 'city', 'zip'
+  	'name', 'rating', 'type', 'website', 'description', 'adress', 'country', 'city', 'zip', 
   ];
 
   public function facility()
@@ -15,8 +15,9 @@ class Hotel extends Model
     return $this->hasOne('App\Facility');
   }
 
-  public function reservation()
+  public function room()
   {
-    return $this->hasMany('App\Reservation');
+    return $this->hasMany('App\Room');
   }
+
 }

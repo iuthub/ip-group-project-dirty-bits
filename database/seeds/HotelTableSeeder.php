@@ -15,6 +15,7 @@ class HotelTableSeeder extends Seeder
     	Hotel::create([
     		'name' => 'Hiyatt',
         'rating' => 4,
+        'type' => 'Hotel',
         'website' => 'www.hiyatt.com',
         'description' => 'HOTEL BRIEF INFOLorem ipsum dolor sit amet.',
         'adress' => '123, Supper st.',
@@ -26,6 +27,7 @@ class HotelTableSeeder extends Seeder
       Hotel::create([
         'name' => 'Rixos',
         'rating' => 5,
+        'type' => 'Resort',
         'website' => 'www.rixos.com',
         'description' => 'HOTEL BRIEF INFOLorem ipsum dolor sit amet.',
         'adress' => '123, Diner st.',
