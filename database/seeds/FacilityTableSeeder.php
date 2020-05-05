@@ -13,6 +13,7 @@ class FacilityTableSeeder extends Seeder
     public function run()
     {
     	Facility::create([
+      'hotel_id' => 1,
       'concierge' => true,
       'business' => true,
       'spa' => true,
@@ -31,6 +32,7 @@ class FacilityTableSeeder extends Seeder
       ]);
 
       Facility::create([
+      'hotel_id' => 2 ,
       'concierge' => true,
       'business' => false,
       'spa' => true,
