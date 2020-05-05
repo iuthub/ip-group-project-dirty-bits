@@ -2,6 +2,7 @@
 @section('content')
 <!-- Create Hotel Form -->
 <div class="container">
+	<!-- Hotel Details -->
 	<div class="text-center">
 		<h2>Hotel Create Page</h2>
 	</div>
@@ -66,7 +67,58 @@
 				placeholder="100187">
 			</div>
 		</div>
-		<label>Facilities</label>
+		<!-- Hotel Details -->
+		<div class="text-center mb-3">
+			<h4>Room Details</h4>
+		</div>
+		<div class="form-row mb-4">
+			<div class="form-check col-md-4 col-sm-6 text-center mb-3">
+				<input class="form-check-input" type="checkbox" id="luxuryCheckbox" value="Luxury">
+				<label class="form-check-label">Luxury </label>
+				<label>| Price</label>
+				<input type="text" class="form-control" id="inputPrice1"
+				placeholder="600$">
+			</div>
+			<div class="form-check col-md-4 col-sm-6 text-center mb-3">
+				<input class="form-check-input" type="checkbox" id="comfortPlusCheckbox" value="Comfort Plus">
+				<label class="form-check-label">Comfort Plus </label>
+				<label>| Price</label>
+				<input type="text" class="form-control" id="inputPrice2"
+				placeholder="500$">
+			</div>
+			<div class="form-check col-md-4 col-sm-6 text-center mb-3">
+				<input class="form-check-input" type="checkbox" id="comfortCheckbox" value="Comfort">
+				<label class="form-check-label">Comfort </label>
+				<label>| Price</label>
+				<input type="text" class="form-control" id="inputPrice3"
+				placeholder="400$">
+			</div>
+			<div class="form-check col-md-4 col-sm-6 text-center mb-3">
+				<input class="form-check-input" type="checkbox" id="familyCheckbox" value="Family">
+				<label class="form-check-label">Family </label>
+				<label>| Price</label>
+				<input type="text" class="form-control" id="inputPrice4"
+				placeholder="300$">
+			</div>
+			<div class="form-check col-md-4 col-sm-6 text-center mb-3">
+				<input class="form-check-input" type="checkbox" id="basicCheckbox" value="Family">
+				<label class="form-check-label">Basic </label>
+				<label>| Price</label>
+				<input type="text" class="form-control" id="inputPrice5"
+				placeholder="200$">
+			</div>
+			<div class="form-check col-md-4 col-sm-6 text-center mb-3">
+				<input class="form-check-input" type="checkbox" id="bedOnlyCheckbox" value="Bed Only">
+				<label class="form-check-label">Bed Only </label>
+				<label>| Price</label>
+				<input type="text" class="form-control" id="inputPrice5"
+				placeholder="100$">
+			</div>			
+		</div>
+		<!-- Facilities -->
+		<div class="text-center mb-3">
+			<h4>Facilities</h4>
+		</div>
 		<div class="form-group">
 			<div class="form-check form-check-inline">
 				<input class="form-check-input" type="checkbox" id="conciergeCheckbox" value="concierge">

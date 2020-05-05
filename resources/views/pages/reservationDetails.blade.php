@@ -44,7 +44,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="text-center">
+				<div class="text-center mt-3 mb-4">
 					<button type="submit" class="btn btn-primary w-50">Reserve</button>
 					<button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="collapseHotelInfo collapseReservationImage">Show Hotel</button>
 				</div>
