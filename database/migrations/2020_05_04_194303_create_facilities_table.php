@@ -15,22 +15,9 @@ class CreateFacilitiesTable extends Migration
     {
         Schema::create('facilities', function (Blueprint $table) {
             $table->id();
+            $table->integer('hotel_id');
             $table->timestamps();
-            $table->boolean('concierge');
-            $table->boolean('business');
-            $table->boolean('spa');
-            $table->boolean('fitness');
-            $table->boolean('pool');
-            $table->boolean('restaurant');
-            $table->boolean('laundry');
-            $table->boolean('shuttle');
-            $table->boolean('wifi');
-            $table->boolean('beach');
-            $table->boolean('breakfast');
-            $table->boolean('pet');
-            $table->boolean('nonsmoking');
-            $table->boolean('family');
-            $table->boolean('charging');
+            $table->string('name', 50);
         });
     }
 

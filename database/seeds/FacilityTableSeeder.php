@@ -13,39 +13,54 @@ class FacilityTableSeeder extends Seeder
     public function run()
     {
     	Facility::create([
-      'concierge' => true,
-      'business' => true,
-      'spa' => true,
-      'fitness' => true,
-      'pool' => true,
-      'restaurant' => true,
-      'laundry' => true,
-      'shuttle' => true,
-      'wifi' => true,
-      'beach' => false,
-      'breakfast' => true,
-      'pet' => false,
-      'nonsmoking' => true,
-      'family' => false,
-      'charging' => false
+      'hotel_id' => 1,
+      'name' => 'Concierge'
       ]);
 
       Facility::create([
-      'concierge' => true,
-      'business' => false,
-      'spa' => true,
-      'fitness' => true,
-      'pool' => true,
-      'restaurant' => false,
-      'laundry' => true,
-      'shuttle' => false,
-      'wifi' => true,
-      'beach' => true,
-      'breakfast' => true,
-      'pet' => false,
-      'nonsmoking' => false,
-      'family' => false,
-      'charging' => false
+      'hotel_id' => 1,
+      'name' => 'Business Services'
       ]);
+
+      Facility::create([
+      'hotel_id' => 1,
+      'name' => 'SPA'
+      ]);
+
+      Facility::create([
+      'hotel_id' => 1,
+      'name' => 'Restaurant on-site'
+      ]);
+
+      Facility::create([
+      'hotel_id' => 1,
+      'name' => 'Breakfast'
+      ]);
+
+      Facility::create([
+      'hotel_id' => 2,
+      'name' => 'Concierge'
+      ]);
+
+      Facility::create([
+      'hotel_id' => 2,
+      'name' => 'Business Services'
+      ]);
+
+      Facility::create([
+      'hotel_id' => 2,
+      'name' => 'Fitness Center'
+      ]);
+
+      Facility::create([
+      'hotel_id' => 2,
+      'name' => 'Pool'
+      ]);
+
+      Facility::create([
+      'hotel_id' => 1,
+      'name' => 'Wifi'
+      ]);
+
     }
 }
