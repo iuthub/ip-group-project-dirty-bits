@@ -12,7 +12,7 @@
 						<li class="list-group-item">Type: {{ $hotel->type }}</li>
 						<li class="list-group-item">Stars: {{ $hotel->rating }}</li>
 						<li class="list-group-item">Site: {{ $hotel->website }}</li>
-						<li class="list-group-item">Adress: {{ $hotel->adress }}</li>
+						<li class="list-group-item">Adress: {{ $hotel->address }}</li>
 						<li class="list-group-item">City: {{ $hotel->city }}</li>
 						<li class="list-group-item">Country: {{ $hotel->country }}</li>
 						<li class="list-group-item">Zip: {{ $hotel->zip }}</li>
