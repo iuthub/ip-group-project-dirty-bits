@@ -1,0 +1,1 @@
+https://conradhotels3.hilton.com/resources/media/ch/BLRKRCI/en_US/img/shared/full_page_image_gallery/main/CN_hotelexterior_700x525_FitToBoxSmallDimension_LowerCenter.jpg

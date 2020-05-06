@@ -1,0 +1,1 @@
+https://dubai.in.ua/wp-content/uploads/2011/06/room1.jpg

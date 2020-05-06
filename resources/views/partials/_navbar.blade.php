@@ -7,10 +7,12 @@
 		<div class="collapse navbar-collapse float-right" id="navbarContent">
 			<ul class="nav navbar-nav navbar-right">
 				<li class="nav-item">
-					<a class="nav-link active" href="{{ URL::route('/') }}">Offers</a>
+					<a class="nav-link" href="{{ URL::route('/') }}">Offers</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="{{ URL::route('my-reservations') }}">My Reservations</a>
+					<form method="get" action="{{ route('hotels.index') }}">
+						<button type="submit" class="btn nav-link">Hotels</button>
+					</form>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="{{ URL::route('about') }}">About</a>
