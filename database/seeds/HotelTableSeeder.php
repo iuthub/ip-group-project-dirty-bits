@@ -18,7 +18,7 @@ class HotelTableSeeder extends Seeder
         'type' => 'Hotel',
         'website' => 'www.hiyatt.com',
         'description' => 'HOTEL BRIEF INFOLorem ipsum dolor sit amet.',
-        'adress' => '123, Supper st.',
+        'address' => '123, Supper st.',
         'country' => 'Uzbekistan',
         'city' => 'Tashkent',
         'zip' => '100187'
@@ -30,7 +30,7 @@ class HotelTableSeeder extends Seeder
         'type' => 'Resort',
         'website' => 'www.rixos.com',
         'description' => 'HOTEL BRIEF INFOLorem ipsum dolor sit amet.',
-        'adress' => '123, Diner st.',
+        'address' => '123, Diner st.',
         'country' => 'Malasia',
         'city' => 'Kuala Lumpur',
         'zip' => '200298'
