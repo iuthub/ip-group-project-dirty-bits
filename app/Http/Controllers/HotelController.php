@@ -16,7 +16,16 @@ class HotelController extends Controller
      */
     public function index()
     {
-        //
+        $hotels = Hotel::all();
+        $rooms = Room::all();
+        $facilities = Facility::all();
+
+        $title = "Hotel List";
+
+        return view('pages.hotels', compact('title'))
+        ->with(compact('hotels'))
+        ->with(compact('rooms'))
+        ->with(compact('facilities'));
     }
 
     /**
