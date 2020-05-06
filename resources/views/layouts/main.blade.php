@@ -10,6 +10,12 @@
 	</head>
 	<body>
 		@include('partials._navbar')
+		@if (\Session::has('error'))
+      @include('partials._error')
+    @endif
+    @if (\Session::has('success'))
+      @include('partials._success')
+    @endif
 		@yield('content')
 		@include('partials._footer')
 		<!-- Optional JavaScript -->
