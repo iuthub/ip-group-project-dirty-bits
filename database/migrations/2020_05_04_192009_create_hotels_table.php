@@ -21,7 +21,7 @@ class CreateHotelsTable extends Migration
             $table->integer('rating');
             $table->string('website', 20)->unique();
             $table->text('description', 100);
-            $table->string('adress', 50);
+            $table->string('address', 50);
             $table->string('country', 20);
             $table->string('city', 20);
             $table->string('zip', 20);
