@@ -1,4 +1,5 @@
 @extends('layouts.main')
+<title>Reservation Details</title>
 @section('content')
 <!-- Reservation Details Page Content -->
 <div class="container">
