@@ -1,4 +1,5 @@
 @extends('layouts.main')
+<title>Create Page</title>
 @section('content')
 <!-- Create Hotel Form -->
 <div class="container">
@@ -107,7 +108,7 @@
 				<label class="form-check-label">Bed Only | Price</label>
 				<input type="text" class="form-control" id="inputPrice6" name="price[]"
 				placeholder="100$">
-			</div>			
+			</div>
 		</div>
 		<!-- Facilities -->
 		<div class="text-center mb-3">
