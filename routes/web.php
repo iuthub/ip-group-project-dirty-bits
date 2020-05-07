@@ -32,3 +32,4 @@ Route::get('/error', function () {
     return view('pages.error');
 })->name('error');
 Route::resource('hotels', 'HotelController');
+Route::resource('reservations', 'ReservationController');
