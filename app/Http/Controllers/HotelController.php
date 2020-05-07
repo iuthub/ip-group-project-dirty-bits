@@ -144,14 +144,16 @@ class HotelController extends Controller
     {
         $hotel = Hotel::findOrFail($id);
 
-        $rooms = $hotel->room;
+        // $rooms = $hotel->room;
 
-        $facilities = $hotel->facility;
+        // $facilities = $hotel->facility;
 
         $title = "Hotel Edit Page";
+        $description = $hotel->description;
 
         return view('pages.edit', compact('title'))
-        ->with(compact('hotel'));
+        ->with(compact('hotel'))
+        ->with(compact('description'));
     }
 
     /**
@@ -163,7 +165,21 @@ class HotelController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $hotel = [
+            'name' => $request->get('name'),
+            'rating' => $request->get('rating'),
+            'type' => $request->get('hotel_type'),
+            'website' => $request->get('website'),
+            'description' => $request->get('description'),
+            'address' => $request->get('address'),
+            'country' => $request->get('country'),
+            'city' => $request->get('city'),
+            'zip' => $request->get('zip')
+        ];
+
+        Hotel::whereId($id)->update($hotel);
+
+        return redirect('/hotels')->with('success', 'Hotel is edited!');
     }
 
     /**

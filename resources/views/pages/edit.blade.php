@@ -6,8 +6,9 @@
 	<div class="text-center">
 		<h2>{{$title}}</h2>
 	</div>
-	<form method="post" action="{{ route('hotels.store') }}">
+	<form method="post" action="{{ route('hotels.update', $hotel->id) }}">
 		@csrf
+	  @method('PATCH')
 		<div class="form-row mt-4">
 			<div class="form-group col-md-4">
 				<label for="inputName">Hotel Name</label>
@@ -16,7 +17,7 @@
 			<div class="form-group col-md-2">
 				<label for="inputType">Type</label>
 				<select id="inputType" class="form-control" name="hotel_type">
-					<option selected value="{{ $hotel->name }}">
+					<option selected value="{{ $hotel->type }}">
 						{{ $hotel->type }}
 					</option>
 					<option value="Hotel">Hotel</option>
@@ -32,7 +33,7 @@
 			<div class="form-group col-md-2">
 				<label for="inputRating">Star Rating</label>
 				<select id="inputRating" class="form-control" name="rating">
-					<option value="{{ $hotel->name }}" selected>
+					<option value="{{ $hotel->rating }}" selected>
 						{{ $hotel->rating }}
 					</option>
 					<option value="1">1</option>
@@ -50,7 +51,7 @@
 		<div class="form-row">
 			<div class="form-group col-md-7">
 				<label for="inputDescription">Description</label>
-				<input type="text" class="form-control" id="inputDescription" name="description" value={{ $hotel->description }}>
+				<input type="text" class="form-control" id="inputDescription" name="description" value="{{ $hotel->description }}">
 			</div>
 			<div class="form-group col-md-5">
 				<label for="inputAddress">Address</label>
@@ -70,34 +71,6 @@
 				<label for="inputZip">Zip</label>
 				<input type="text" class="form-control" id="inputZip" name="zip" value="{{ $hotel->zip }}">
 			</div>
-		</div>
-		<!-- Hotel Details -->
-		<div class="text-center mb-3">
-			<h4>Room Details</h4>
-		</div>
-		<div class="form-row mb-4">
-			@foreach($hotel->room as $room)
-				<div class="form-check col-md-4 col-sm-6 text-center mb-3">
-					<input class="form-check-input" type="checkbox" value="{{ $room->type }}" name="room_type[]">
-					<label class="form-check-label">
-						{{ $room->type }} | Price
-					</label>
-					<input type="text" class="form-control" name="price[]"
-					value="{{ $room->price }}">
-				</div>
-			@endforeach		
-		</div>
-		<!-- Facilities -->
-		<div class="text-center mb-3">
-			<h4>Facilities</h4>
-		</div>
-		<div class="form-group">
-			@foreach($hotel->facility as $facility)
-				<div class="form-check form-check-inline">
-					<input class="form-check-input" type="checkbox" id="conciergeCheckbox" value="Concierge" name="facility[]">
-					<label class="form-check-label" for="conciergeCheckbox">{{ $facility->name }}</label>
-				</div>
-			@endforeach
 		</div>
 		<div class="text-center">
 			<button type="submit" class="btn btn-primary btn-lg w-50">Save Changes</button>
