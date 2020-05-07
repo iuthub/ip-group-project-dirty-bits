@@ -1,4 +1,5 @@
 @extends('layouts.main')
+<title>Hotel</title>
 @section('content')
 <div class="wrapper container">
 	<!-- Search Hotels Form -->
