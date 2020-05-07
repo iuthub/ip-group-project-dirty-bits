@@ -165,6 +165,21 @@ class HotelController extends Controller
      */
     public function destroy($id)
     {
-        //
+
+        $hotel = Hotel::findOrFail($id);
+
+        $rooms = $hotel->room;
+        foreach($rooms as $room){
+            Room::findOrFail($room->id)->delete();
+        }
+
+        $facilities = $hotel->facility;
+        foreach($facilities as $facility){
+            Facility::findOrFail($facility->id)->delete();
+        }
+
+        $hotel->delete();
+
+        return redirect('/')->with('success', 'Hotel is successfully deleted with rooms and facilities!');
     }
 }

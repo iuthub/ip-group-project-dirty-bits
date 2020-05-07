@@ -31,8 +31,21 @@
 			</div>
 			<div class="card-body">
 				<a class="card-link dropdown-toggle" href="#collapseReservation{{ $hotel->id }}" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">Show more</a>
-				<a href="{{ URL::route('reservation-details') }}" class="card-link">Book now</a>
-				<a href="#" class="card-link">Edit</a>
+				<a href="{{ URL::route('reservation-details') }}" class="card-link">
+					Book now
+				</a>
+				<form action="{{ route('hotels.edit', $hotel->id)}}" method="get">
+          <button class="btn btn-link card-link" type="submit">
+          	Edit
+        	</button>
+        </form>
+				<form action="{{ route('hotels.destroy', $hotel->id)}}" method="post">
+          @csrf
+          @method('DELETE')
+          <button class="btn btn-link card-link" type="submit">
+          	Delete
+          </button>
+        </form>
 			</div>
 		</div>
 	</div>
