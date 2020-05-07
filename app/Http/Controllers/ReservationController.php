@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Hotel;
+use App\Reservation;
 
 class ReservationController extends Controller
 {
@@ -35,7 +36,18 @@ class ReservationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $reservation = new Reservation([
+            'from' => $request->get('from'),
+            'to' => $request->get('to'),
+            'room_num' => $request->get('room_num'),
+            'room_id' => $request->get('room_id'),
+            'persons' => $request->get('persons'),
+            'user_id' => 1
+        ]);
+
+        $reservation->save();
+
+        return redirect('/')->with('success', 'Reservation is made!');
     }
 
     /**

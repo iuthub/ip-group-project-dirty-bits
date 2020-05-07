@@ -8,35 +8,36 @@
 			<div class="text-center">
 				<h3>Reservation Details</h3>
 			</div>
-			<form>
+			<form method="post" action="{{ route('reservations.store') }}">
+				@csrf
 				<div class="card card-body">
 					<div class="row">
 						<div class="col-md-6 col-sm-6">
 							<label for="inputFrom">From</label>
-							<input type="date" id="inputFrom" class="form-control" value="2020-04-28">
+							<input type="date" id="inputFrom" class="form-control" value="2020-04-28" name="from">
 						</div>
 						<div class="col-md-6 col-sm-6">
 							<label for="inputTo">To</label>
-							<input type="date" id="inputTo" class="form-control" value="2020-04-29">
+							<input type="date" id="inputTo" class="form-control" value="2020-04-29" name="to">
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-md-6">
 							<label for="inputName">Number of Rooms</label>
-							<input type="number" min="1" max="2" class="form-control" id="inputName" value="1">
+							<input type="number" min="1" max="2" class="form-control" id="inputName" value="1" name="room_num">
 						</div>
 						<div class="col-md-6">
 							<label for="inputName">Number of Persons</label>
-							<input type="number" min="1" max="5" class="form-control" id="inputName" value="1">
+							<input type="number" min="1" max="5" class="form-control" id="inputName" value="1" name="persons">
 						</div>
 					</div>
 					<div class="row">
 						<div class="col">
 							<label for="inputType">Room Type</label>
-							<select id="inputType" class="form-control">
+							<select id="inputType" class="form-control" name="room_id">
 								<option selected>Choose...</option>
 								@foreach($hotel->room as $room)
-									<option value="{{$room->type}} | {{$room->price}}">
+									<option value="{{$room->id}}">
 										{{$room->type}} | {{$room->price}}$
 									</option>
 								@endforeach
