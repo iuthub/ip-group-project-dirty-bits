@@ -21,6 +21,7 @@ class CreateReservationsTable extends Migration
             $table->date('from');
             $table->date('to');
             $table->integer('persons');
+            $table->integer('room_num');
         });
     }
 

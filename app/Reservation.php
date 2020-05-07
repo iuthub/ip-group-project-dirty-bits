@@ -16,5 +16,5 @@ class Reservation extends Model
   	return $this->belongsTo('App\Room');
   }
 
-	protected $fillable = [ 'from', 'to', 'persons' ];
+	protected $fillable = [ 'from', 'to', 'persons', 'room_num', 'room_id' ];
 }
