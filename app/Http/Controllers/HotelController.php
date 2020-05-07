@@ -142,7 +142,16 @@ class HotelController extends Controller
      */
     public function edit($id)
     {
-        //
+        $hotel = Hotel::findOrFail($id);
+
+        $rooms = $hotel->room;
+
+        $facilities = $hotel->facility;
+
+        $title = "Hotel Edit Page";
+
+        return view('pages.edit', compact('title'))
+        ->with(compact('hotel'));
     }
 
     /**

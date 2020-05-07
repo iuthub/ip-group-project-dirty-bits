@@ -12,7 +12,7 @@ class Hotel extends Model
 
   public function facility()
   {
-    return $this->hasOne('App\Facility');
+    return $this->hasMany('App\Facility');
   }
 
   public function room()
