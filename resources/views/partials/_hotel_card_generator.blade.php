@@ -31,23 +31,27 @@
 			</div>
 			<div class="card-body">
 				<a class="card-link dropdown-toggle" href="#collapseReservation{{ $hotel->id }}" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">Show more</a>
-				<form action="{{ route('reservations.show', $hotel->id)}}" method="get">
-          <button class="btn btn-link card-link" type="submit">
-          	Book now
-        	</button>
-        </form>
-				<form action="{{ route('hotels.edit', $hotel->id)}}" method="get">
-          <button class="btn btn-link card-link" type="submit">
-          	Edit
-        	</button>
-        </form>
-				<form action="{{ route('hotels.destroy', $hotel->id)}}" method="post">
-          @csrf
-          @method('DELETE')
-          <button class="btn btn-link card-link" type="submit">
-          	Delete
-          </button>
-        </form>
+				@if(Auth::check())
+					<form action="{{ route('reservations.show', $hotel->id)}}" method="get">
+	          <button class="btn btn-link card-link" type="submit">
+	          	Book now
+	        	</button>
+	        </form>
+	      @endif
+	      @if(Auth::check() && (Auth::user()->admin))
+					<form action="{{ route('hotels.edit', $hotel->id)}}" method="get">
+	          <button class="btn btn-link card-link" type="submit">
+	          	Edit
+	        	</button>
+	        </form>
+					<form action="{{ route('hotels.destroy', $hotel->id)}}" method="post">
+	          @csrf
+	          @method('DELETE')
+	          <button class="btn btn-link card-link" type="submit">
+	          	Delete
+	          </button>
+	        </form>
+	      @endif
 			</div>
 		</div>
 	</div>

@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.app')
 <title>My Reservations</title>
 @section('content')
 <!-- My Reservations -->

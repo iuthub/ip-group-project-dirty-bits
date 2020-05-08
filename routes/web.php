@@ -13,9 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('pages.index');
-})->name('/');
 Route::get('/about', function () {
     return view('pages.about');
 })->name('about');
@@ -38,5 +35,4 @@ Route::get('/find', [
 	'as' => 'find',
 ]);
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('/');

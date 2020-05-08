@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.app')
 <title>Hotel</title>
 @section('content')
 <div class="wrapper container">
