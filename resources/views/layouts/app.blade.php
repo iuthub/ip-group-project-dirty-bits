@@ -22,6 +22,8 @@
 <body>
         @include('partials._navbar')
 
+        @include('partials._search_form')
+
         @if (\Session::has('error'))
           @include('partials._error')
         @endif
