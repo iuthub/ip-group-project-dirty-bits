@@ -37,3 +37,6 @@ Route::get('/find', [
 	'uses' => 'HotelController@find',
 	'as' => 'find',
 ]);
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
