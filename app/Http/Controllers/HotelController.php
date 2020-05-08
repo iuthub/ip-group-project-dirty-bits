@@ -17,15 +17,39 @@ class HotelController extends Controller
     public function index()
     {
         $hotels = Hotel::all();
-        $rooms = Room::all();
-        $facilities = Facility::all();
+        foreach ($hotels as $hotel) {
+            $rooms = $hotel->room;
+            $facilities = $hotel->facility;
+        }
 
         $title = "Hotel List";
 
         return view('pages.hotels', compact('title'))
-        ->with(compact('hotels'))
-        ->with(compact('rooms'))
-        ->with(compact('facilities'));
+        ->with(compact('hotels'));
+    }
+
+    /**
+     * Find a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function find(Request $request)
+    {
+        $title = "Search Result";
+
+        $find_arg = $request->get('find_arg');
+
+        $hotels = Hotel::where('country','LIKE','%'.$find_arg.'%')
+        ->orWhere('city','LIKE','%'.$find_arg.'%')->get();
+
+        foreach ($hotels as $hotel) {
+            $rooms = $hotel->room;
+            $facilities = $hotel->facility;
+        }
+
+        return view('pages.hotels', compact('title'))
+        ->with(compact('hotels'));
     }
 
     /**

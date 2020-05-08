@@ -16,12 +16,12 @@
 						<li class="list-group-item">City: {{ $hotel->city }}</li>
 						<li class="list-group-item">Country: {{ $hotel->country }}</li>
 						<li class="list-group-item">Zip: {{ $hotel->zip }}</li>
-						@foreach($rooms as $room)
+						@foreach($hotel->room as $room)
 							@if($hotel->id == $room->hotel_id )
 								<li class="list-group-item">{{ $room->type }} | {{ $room->price }}$ </li>
 							@endif
 						@endforeach
-						@foreach($facilities as $facility)
+						@foreach($hotel->facility as $facility)
 							@if($hotel->id == $facility->hotel_id )
 								<li class="list-group-item">{{ $facility->name }}</li>
 							@endif

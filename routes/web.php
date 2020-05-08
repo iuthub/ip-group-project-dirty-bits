@@ -33,3 +33,7 @@ Route::get('/error', function () {
 })->name('error');
 Route::resource('hotels', 'HotelController');
 Route::resource('reservations', 'ReservationController');
+Route::get('/find', [
+	'uses' => 'HotelController@find',
+	'as' => 'find',
+]);
