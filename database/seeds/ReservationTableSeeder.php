@@ -17,6 +17,7 @@ class ReservationTableSeeder extends Seeder
       'from' => Carbon::parse('2020-05-10'),
       'to' => Carbon::parse('2020-05-12'),
       'persons' => 3,
+      'room_num' => 2,
       'room_id' => 1,
       'user_id' => 1
       ]);
@@ -25,6 +26,7 @@ class ReservationTableSeeder extends Seeder
       'from' => Carbon::parse('2020-05-11'),
       'to' => Carbon::parse('2020-05-13'),
       'persons' => 2,
+      'room_num' => 1,
       'room_id' => 2,
       'user_id' => 2
       ]);
@@ -33,6 +35,7 @@ class ReservationTableSeeder extends Seeder
       'from' => Carbon::parse('2020-05-10'),
       'to' => Carbon::parse('2020-05-12'),
       'persons' => 1,
+      'room_num' => 2,
       'room_id' => 3,
       'user_id' => 3
       ]);
@@ -41,6 +44,7 @@ class ReservationTableSeeder extends Seeder
       'from' => Carbon::parse('2020-05-11'),
       'to' => Carbon::parse('2020-05-13'),
       'persons' => 4,
+      'room_num' => 1,
       'room_id' => 3,
       'user_id' => 4
       ]);

@@ -17,15 +17,39 @@ class HotelController extends Controller
     public function index()
     {
         $hotels = Hotel::all();
-        $rooms = Room::all();
-        $facilities = Facility::all();
+        foreach ($hotels as $hotel) {
+            $rooms = $hotel->room;
+            $facilities = $hotel->facility;
+        }
 
         $title = "Hotel List";
 
         return view('pages.hotels', compact('title'))
-        ->with(compact('hotels'))
-        ->with(compact('rooms'))
-        ->with(compact('facilities'));
+        ->with(compact('hotels'));
+    }
+
+    /**
+     * Find a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function find(Request $request)
+    {
+        $title = "Search Result";
+
+        $find_arg = $request->get('find_arg');
+
+        $hotels = Hotel::where('country','LIKE','%'.$find_arg.'%')
+        ->orWhere('city','LIKE','%'.$find_arg.'%')->get();
+
+        foreach ($hotels as $hotel) {
+            $rooms = $hotel->room;
+            $facilities = $hotel->facility;
+        }
+
+        return view('pages.hotels', compact('title'))
+        ->with(compact('hotels'));
     }
 
     /**
@@ -144,14 +168,16 @@ class HotelController extends Controller
     {
         $hotel = Hotel::findOrFail($id);
 
-        $rooms = $hotel->room;
+        // $rooms = $hotel->room;
 
-        $facilities = $hotel->facility;
+        // $facilities = $hotel->facility;
 
         $title = "Hotel Edit Page";
+        $description = $hotel->description;
 
         return view('pages.edit', compact('title'))
-        ->with(compact('hotel'));
+        ->with(compact('hotel'))
+        ->with(compact('description'));
     }
 
     /**
@@ -163,7 +189,21 @@ class HotelController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $hotel = [
+            'name' => $request->get('name'),
+            'rating' => $request->get('rating'),
+            'type' => $request->get('hotel_type'),
+            'website' => $request->get('website'),
+            'description' => $request->get('description'),
+            'address' => $request->get('address'),
+            'country' => $request->get('country'),
+            'city' => $request->get('city'),
+            'zip' => $request->get('zip')
+        ];
+
+        Hotel::whereId($id)->update($hotel);
+
+        return redirect('/hotels')->with('success', 'Hotel is edited!');
     }
 
     /**

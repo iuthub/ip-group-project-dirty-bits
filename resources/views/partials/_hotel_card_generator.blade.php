@@ -16,12 +16,12 @@
 						<li class="list-group-item">City: {{ $hotel->city }}</li>
 						<li class="list-group-item">Country: {{ $hotel->country }}</li>
 						<li class="list-group-item">Zip: {{ $hotel->zip }}</li>
-						@foreach($rooms as $room)
+						@foreach($hotel->room as $room)
 							@if($hotel->id == $room->hotel_id )
 								<li class="list-group-item">{{ $room->type }} | {{ $room->price }}$ </li>
 							@endif
 						@endforeach
-						@foreach($facilities as $facility)
+						@foreach($hotel->facility as $facility)
 							@if($hotel->id == $facility->hotel_id )
 								<li class="list-group-item">{{ $facility->name }}</li>
 							@endif
@@ -31,9 +31,11 @@
 			</div>
 			<div class="card-body">
 				<a class="card-link dropdown-toggle" href="#collapseReservation{{ $hotel->id }}" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">Show more</a>
-				<a href="{{ URL::route('reservation-details') }}" class="card-link">
-					Book now
-				</a>
+				<form action="{{ route('reservations.show', $hotel->id)}}" method="get">
+          <button class="btn btn-link card-link" type="submit">
+          	Book now
+        	</button>
+        </form>
 				<form action="{{ route('hotels.edit', $hotel->id)}}" method="get">
           <button class="btn btn-link card-link" type="submit">
           	Edit

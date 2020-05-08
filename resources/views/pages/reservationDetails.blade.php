@@ -8,39 +8,39 @@
 			<div class="text-center">
 				<h3>Reservation Details</h3>
 			</div>
-			<form>
+			<form method="post" action="{{ route('reservations.store') }}">
+				@csrf
 				<div class="card card-body">
 					<div class="row">
 						<div class="col-md-6 col-sm-6">
 							<label for="inputFrom">From</label>
-							<input type="date" id="inputFrom" class="form-control" value="2020-04-28">
+							<input type="date" id="inputFrom" class="form-control" value="2020-04-28" name="from">
 						</div>
 						<div class="col-md-6 col-sm-6">
 							<label for="inputTo">To</label>
-							<input type="date" id="inputTo" class="form-control" value="2020-04-29">
+							<input type="date" id="inputTo" class="form-control" value="2020-04-29" name="to">
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-md-6">
 							<label for="inputName">Number of Rooms</label>
-							<input type="number" min="1" max="2" class="form-control" id="inputName" value="1">
+							<input type="number" min="1" max="2" class="form-control" id="inputName" value="1" name="room_num">
 						</div>
 						<div class="col-md-6">
 							<label for="inputName">Number of Persons</label>
-							<input type="number" min="1" max="5" class="form-control" id="inputName" value="1">
+							<input type="number" min="1" max="5" class="form-control" id="inputName" value="1" name="persons">
 						</div>
 					</div>
 					<div class="row">
 						<div class="col">
 							<label for="inputType">Room Type</label>
-							<select id="inputType" class="form-control">
+							<select id="inputType" class="form-control" name="room_id">
 								<option selected>Choose...</option>
-								<option selected="selected">Luxury</option>
-								<option>Comfort Plus</option>
-								<option>Comfort</option>
-								<option>Family</option>
-								<option>Basic</option>
-								<option>Bed Only</option>
+								@foreach($hotel->room as $room)
+									<option value="{{$room->id}}">
+										{{$room->type}} | {{$room->price}}$
+									</option>
+								@endforeach
 							</select>
 						</div>
 					</div>
@@ -59,18 +59,27 @@
 				<div class="card card-body">
 					<img src="https://dubai.in.ua/wp-content/uploads/2011/06/room1.jpg" class="card-img-top" alt="...">
 					<div class="card-body">
-						<h5 class="card-title">HOTEL NAME</h5>
-						<p class="card-text">HOTEL BRIEF INFOLorem ipsum dolor sit amet.</p>
+						<h5 class="card-title">{{ $hotel->name }}</h5>
+						<p class="card-text">{{ $hotel->description }}</p>
 					</div>
 					<div class="collapse" id="collapseHotelInfoMore">
 						<div class="card card-body">
 							<ul class="list-group list-group-flush">
-								<li class="list-group-item">Cras justo odio</li>
-								<li class="list-group-item">Dapibus ac facilisis in</li>
-								<li class="list-group-item">Vestibulum at eros</li>
-								<li class="list-group-item">Cras justo odio</li>
-								<li class="list-group-item">Dapibus ac facilisis in</li>
-								<li class="list-group-item">Vestibulum at eros</li>
+								<li class="list-group-item">Type: {{ $hotel->type }}</li>
+								<li class="list-group-item">Stars: {{ $hotel->rating }}</li>
+								<li class="list-group-item">Site: {{ $hotel->website }}</li>
+								<li class="list-group-item">Adress: {{ $hotel->address }}</li>
+								<li class="list-group-item">City: {{ $hotel->city }}</li>
+								<li class="list-group-item">Country: {{ $hotel->country }}</li>
+								<li class="list-group-item">Zip: {{ $hotel->zip }}</li>
+							@foreach($hotel->room as $room)
+								<li class="list-group-item">{{ $room->type }} | {{ $room->price }}$ </li>
+							@endforeach
+							@foreach($hotel->facility as $facility)
+								@if($hotel->id == $facility->hotel_id )
+									<li class="list-group-item">{{ $facility->name }}</li>
+								@endif
+							@endforeach
 							</ul>
 						</div>
 					</div>
