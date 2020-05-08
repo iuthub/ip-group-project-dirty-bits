@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.app')
 <title>Create Page</title>
 @section('content')
 <!-- Create Hotel Form -->

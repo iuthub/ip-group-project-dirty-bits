@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.app')
 <title>Error</title>
 @section('content')
 <!-- Error Page -->
