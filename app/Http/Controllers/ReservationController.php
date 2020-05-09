@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Hotel;
 use App\Reservation;
+use Illuminate\Support\Facades\Auth;
 
 class ReservationController extends Controller
 {
@@ -15,7 +16,16 @@ class ReservationController extends Controller
      */
     public function index()
     {
-        //
+        $user = Auth::user();
+
+        $reservations = $user->reservation()->get();
+
+        $hotel_name = array();
+        foreach ($reservations as $reservation) {
+            $room = $reservation->room;
+        }
+
+        return view('pages.myReservations', compact('reservations'));
     }
 
     /**
@@ -42,10 +52,12 @@ class ReservationController extends Controller
             'room_num' => $request->get('room_num'),
             'room_id' => $request->get('room_id'),
             'persons' => $request->get('persons'),
-            'user_id' => 1
+            'hotel_name' => $request->get('hotel_name')
         ]);
 
-        $reservation->save();
+
+        $user = Auth::user();
+        $user->reservation()->save($reservation);
 
         return redirect('/')->with('success', 'Reservation is made!');
     }
@@ -98,6 +110,11 @@ class ReservationController extends Controller
      */
     public function destroy($id)
     {
-        //
+        
+        $reservation = Reservation::findOrFail($id);
+
+        $reservation->delete();
+
+        return redirect('/')->with('success', 'Reservation is successfully canceled!');
     }
 }
