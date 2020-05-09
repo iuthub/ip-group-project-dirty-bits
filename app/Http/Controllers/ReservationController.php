@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Hotel;
 use App\Reservation;
+use Illuminate\Support\Facades\Auth;
 
 class ReservationController extends Controller
 {
@@ -41,11 +42,11 @@ class ReservationController extends Controller
             'to' => $request->get('to'),
             'room_num' => $request->get('room_num'),
             'room_id' => $request->get('room_id'),
-            'persons' => $request->get('persons'),
-            'user_id' => 1
+            'persons' => $request->get('persons')
         ]);
 
-        $reservation->save();
+        $user = Auth::user();
+        $user->reservation()->save($reservation);
 
         return redirect('/')->with('success', 'Reservation is made!');
     }
