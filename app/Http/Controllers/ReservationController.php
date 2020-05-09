@@ -16,7 +16,16 @@ class ReservationController extends Controller
      */
     public function index()
     {
-        //
+        $user = Auth::user();
+
+        $reservations = $user->reservation()->get();
+
+        $hotel_name = array();
+        foreach ($reservations as $reservation) {
+            $room = $reservation->room;
+        }
+
+        return view('pages.myReservations', compact('reservations'));
     }
 
     /**
@@ -42,8 +51,10 @@ class ReservationController extends Controller
             'to' => $request->get('to'),
             'room_num' => $request->get('room_num'),
             'room_id' => $request->get('room_id'),
-            'persons' => $request->get('persons')
+            'persons' => $request->get('persons'),
+            'hotel_name' => $request->get('hotel_name')
         ]);
+
 
         $user = Auth::user();
         $user->reservation()->save($reservation);
@@ -99,6 +110,11 @@ class ReservationController extends Controller
      */
     public function destroy($id)
     {
-        //
+        
+        $reservation = Reservation::findOrFail($id);
+
+        $reservation->delete();
+
+        return redirect('/')->with('success', 'Reservation is successfully canceled!');
     }
 }

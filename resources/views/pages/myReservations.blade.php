@@ -7,106 +7,55 @@
 		<h3>My Reservations</h3>
 	</div>
 	<div class="row">
-		<div class="col-lg-6 col-xl-3 limited d-flex align-items-stretch mb-2">
+		@foreach($reservations as $reservation)
+			<div class="col-sm-6 col-md-4 col-xl-3 limited d-flex align-items-stretch mb-2">
 			<div class="card">
-				<img src="https://dubai.in.ua/wp-content/uploads/2011/06/room1.jpg" class="card-img-top" alt="...">
+				<img style="width: 100%; height: 200px; object-fit: cover;" src="@include('partials.images.link_'. rand(1,10))" class="card-img-top" alt="...">
 				<div class="card-body">
-					<h5 class="card-title">HOTEL NAME</h5>
-					<p class="card-text">HOTEL BRIEF INFOLorem ipsum dolor sit amet.</p>
+					<h6 class="card-title">
+						Reservation {{ $reservation->id }}
+					</h6>
+					<p class="card-text">
+						Hotel: {{ $reservation->hotel_name }}
+					</p>
 				</div>
-				<div class="collapse" id="collapseReservation1">
+				<div class="collapse" id="collapseReservation{{ $reservation->id }}">
 					<div class="card card-body">
 						<ul class="list-group list-group-flush">
-							<li class="list-group-item">Cras justo odio</li>
-							<li class="list-group-item">Dapibus ac facilisis in</li>
-							<li class="list-group-item">Vestibulum at eros</li>
-							<li class="list-group-item">Cras justo odio</li>
-							<li class="list-group-item">Dapibus ac facilisis in</li>
-							<li class="list-group-item">Vestibulum at eros</li>
+							<li class="list-group-item">
+								From: {{ $reservation->from }}
+							</li>
+							<li class="list-group-item">
+								To: {{ $reservation->to }}
+							</li>
+							<li class="list-group-item">
+								Persons: {{ $reservation->perons }}
+							</li>
+							<li class="list-group-item">
+								Rooms: {{ $reservation->room_num }}
+							</li>
+							<li class="list-group-item">
+								Type: {{ $reservation->room->type }}
+							</li>
+							<li class="list-group-item">
+								Price: {{ $reservation->room->price }}
+							</li>
 						</ul>
 					</div>
 				</div>
 				<div class="card-body">
-					<a class="card-link dropdown-toggle" href="#collapseReservation1" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">Show more</a>
-					<a href="#" class="card-link">Cancel</a>
+					<a class="card-link dropdown-toggle" href="#collapseReservation{{ $reservation->id }}" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">Show more</a>
+					<form action="{{ route('reservations.destroy', $reservation->id)}}" method="post">
+	          @csrf
+	          @method('DELETE')
+	          <button class="btn btn-link card-link" type="submit">
+	          	Cancel
+	          </button>
+	        </form>
 				</div>
 			</div>
 		</div>
-		<div class="col-lg-6 col-xl-3 limited d-flex align-items-stretch mb-2">
-			<div class="card">
-				<img src="https://r-cf.bstatic.com/images/hotel/max1024x768/223/223888941.jpg" class="card-img-top" alt="...">
-				<div class="card-body">
-					<h5 class="card-title">HOTEL NAME</h5>
-					<p class="card-text">HOTEL BRIEF INFOLorem ipsum dolor sit amet.</p>
-				</div>
-				<div class="collapse" id="collapseReservation2">
-					<div class="card card-body">
-						<ul class="list-group list-group-flush">
-							<li class="list-group-item">Cras justo odio</li>
-							<li class="list-group-item">Dapibus ac facilisis in</li>
-							<li class="list-group-item">Vestibulum at eros</li>
-							<li class="list-group-item">Cras justo odio</li>
-							<li class="list-group-item">Dapibus ac facilisis in</li>
-							<li class="list-group-item">Vestibulum at eros</li>
-						</ul>
-					</div>
-				</div>
-				<div class="card-body">
-					<a class="card-link dropdown-toggle" href="#collapseReservation2" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">Show more</a>
-					<a href="#" class="card-link">Cancel</a>
-				</div>
-			</div>
-		</div>
-		<div class="col-lg-6 col-xl-3 limited d-flex align-items-stretch mb-2">
-			<div class="card">
-				<img src="https://www.atorus.ru/public/ator/data/image/TOP10/4421/4.jpg" class="card-img-top" alt="...">
-				<div class="card-body">
-					<h5 class="card-title">HOTEL NAME</h5>
-					<p class="card-text">HOTEL BRIEF INFOLorem ipsum dolor sit amet.</p>
-				</div>
-				<div class="collapse" id="collapseReservation3">
-					<div class="card card-body">
-						<ul class="list-group list-group-flush">
-							<li class="list-group-item">Cras justo odio</li>
-							<li class="list-group-item">Dapibus ac facilisis in</li>
-							<li class="list-group-item">Vestibulum at eros</li>
-							<li class="list-group-item">Cras justo odio</li>
-							<li class="list-group-item">Dapibus ac facilisis in</li>
-							<li class="list-group-item">Vestibulum at eros</li>
-						</ul>
-					</div>
-				</div>
-				<div class="card-body">
-					<a class="card-link dropdown-toggle" href="#collapseReservation3" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">Show more</a>
-					<a href="#" class="card-link">Cancel</a>
-				</div>
-			</div>
-		</div>
-		<div class="col-lg-6 col-xl-3 limited d-flex align-items-stretch">
-			<div class="card">
-				<img src="https://voyagecdn.blob.core.windows.net/files/Galeri/11105.jpg" class="card-img-top adaptive" alt="...">
-				<div class="card-body">
-					<h5 class="card-title">HOTEL NAME</h5>
-					<p class="card-text">HOTEL BRIEF INFOLorem ipsum dolor sit amet.</p>
-				</div>
-				<div class="collapse" id="collapseReservation4">
-					<div class="card card-body">
-						<ul class="list-group list-group-flush">
-							<li class="list-group-item">Cras justo odio</li>
-							<li class="list-group-item">Dapibus ac facilisis in</li>
-							<li class="list-group-item">Vestibulum at eros</li>
-							<li class="list-group-item">Cras justo odio</li>
-							<li class="list-group-item">Dapibus ac facilisis in</li>
-							<li class="list-group-item">Vestibulum at eros</li>
-						</ul>
-					</div>
-				</div>
-				<div class="card-body">
-					<a class="card-link dropdown-toggle" href="#collapseReservation4" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">Show more</a>
-					<a href="#" class="card-link">Cancel</a>
-				</div>
-			</div>
-		</div>
+		@endforeach
 	</div>
 </div>
 @endsection
