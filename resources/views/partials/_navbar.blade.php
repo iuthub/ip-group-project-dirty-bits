@@ -7,11 +7,7 @@
         <div class="collapse navbar-collapse float-right" id="navbarContent">
             <!-- Left Side Of Navbar -->
             <ul class="nav navbar-nav navbar-right">
-                <li class="nav-item">
-                    <form method="get" action="{{ route('reservations.index') }}">
-                        <button type="submit" class="btn nav-link">My Reservation</button>
-                    </form>
-                </li>
+                
                 <li class="nav-item">
                     <form method="get" action="{{ route('hotels.index') }}">
                         <button type="submit" class="btn nav-link">Hotels</button>
@@ -23,6 +19,11 @@
                 @if(Auth::check() && (Auth::user()->admin))
                 <li class="nav-item">
                     <a class="nav-link" href="{{ URL::route('create') }}">Create</a>
+                </li>
+                <li class="nav-item">
+                    <form method="get" action="{{ route('reservations.index') }}">
+                        <button type="submit" class="btn nav-link">My Reservation</button>
+                    </form>
                 </li>
                 @endif
             </ul>
