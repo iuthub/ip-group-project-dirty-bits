@@ -10,7 +10,7 @@
 		<p>404 Not Found</p>
 		<p class="lead">
 			<a class="btn btn-primary btn-lg" href="{{ URL::route('/') }}" role="button">Take Me Home</a>
-			<a class="btn btn-default btn-lg" href="#" role="button">Contact Support</a>
+			<a class="btn btn-default btn-lg" href="https://github.com/iuthub/ip-group-project-dirty-bits" role="button">Contact Support</a>
 		</p>
 	</div>
 </div>

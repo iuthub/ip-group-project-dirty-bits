@@ -13,7 +13,7 @@
 				<hr class="my-4">
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, aliquid.</p>
 				<p class="lead">
-					<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+					<a class="btn btn-primary btn-lg" href="{{ route('error') }}" role="button">Learn more</a>
 				</p>
 			</div>
 			<div class="col-md-6">
@@ -32,7 +32,7 @@
 				<hr class="my-4">
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, aliquid.</p>
 				<p class="lead">
-					<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+					<a class="btn btn-primary btn-lg" href="{{ route('error') }}" role="button">Learn more</a>
 				</p>
 			</div>
 		</div>
@@ -45,7 +45,7 @@
 				<hr class="my-4">
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, aliquid.</p>
 				<p class="lead">
-					<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+					<a class="btn btn-primary btn-lg" href="{{ route('error') }}" role="button">Learn more</a>
 				</p>
 			</div>
 			<div class="col-md-6">

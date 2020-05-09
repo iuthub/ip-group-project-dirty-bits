@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Hotel;
 use App\Room;
 use App\Facility;
+use Illuminate\Support\Facades\Auth;
 
 class HotelController extends Controller
 {
@@ -59,7 +60,12 @@ class HotelController extends Controller
      */
     public function create()
     {
-        //
+        if(Auth::check() && (Auth::user()->admin))
+        {
+            return view('pages.create'); 
+        } else {
+            return view('/')->with('error', 'User have no access to this page');
+        }
     }
 
     /**

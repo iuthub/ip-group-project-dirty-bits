@@ -20,6 +20,8 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ URL::route('create') }}">Create</a>
                 </li>
+                @endif
+                @if(Auth::check())
                 <li class="nav-item">
                     <form method="get" action="{{ route('reservations.index') }}">
                         <button type="submit" class="btn nav-link">My Reservation</button>
