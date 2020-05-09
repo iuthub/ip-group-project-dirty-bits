@@ -8,12 +8,15 @@
 	<div class="jumbotron mt-4">
 		<div class="row">
 			<div class="col-md-6">
-				<h1 class="display-4">We are Family!</h1>
-				<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint delectus rerum vero, porro, recusandae necessitatibus.</p>
+				<h1 class="display-4">Our marketing strategy!</h1>
+				<p class="lead"> <ul>
+  <li>Undifferentiated Strategy</li>
+  <li>Diversification </li>
+  <li> Horizontal – Vertical Integration</li>
+</ul></p>
 				<hr class="my-4">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, aliquid.</p>
 				<p class="lead">
-					<a class="btn btn-primary btn-lg" href="{{ route('error') }}" role="button">Learn more</a>
+					<a class="btn btn-primary btn-lg" href="https://www.wearemarketing.com/blog/effective-hotel-marketing-strategies.html" role="button">Learn more</a>
 				</p>
 			</div>
 			<div class="col-md-6">
@@ -27,12 +30,15 @@
 				<img src="https://obittree.com/images/community-support-network.jpg" class="img-thumbnail">
 			</div>
 			<div class="col-md-6">
-				<h1 class="display-4">Everyone Matters!</h1>
-				<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint delectus rerum vero, porro, recusandae necessitatibus.</p>
+				<h1 class="display-4"> Main values!</h1>
+				<p class="lead"> <ul>
+  <li>Loyalty.</li>
+  <li>Consistency. </li>
+  <li> Honesty.</li>
+</ul></p>
 				<hr class="my-4">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, aliquid.</p>
 				<p class="lead">
-					<a class="btn btn-primary btn-lg" href="{{ route('error') }}" role="button">Learn more</a>
+					<a class="btn btn-primary btn-lg" href="https://jamesclear.com/core-values" role="button">Learn more</a>
 				</p>
 			</div>
 		</div>
@@ -40,12 +46,15 @@
 	<div class="jumbotron">
 		<div class="row">
 			<div class="col-md-6">
-				<h1 class="display-4">Find Your Place!</h1>
-				<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint delectus rerum vero, porro, recusandae necessitatibus.</p>
+				<h1 class="display-4">Future plans!</h1>
+				<p class="lead"><ul>
+  <li>Being popular</li>
+  <li>New services </li>
+  <li>Find the medicine for covid-19</li>
+</ul></p>
 				<hr class="my-4">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, aliquid.</p>
 				<p class="lead">
-					<a class="btn btn-primary btn-lg" href="{{ route('error') }}" role="button">Learn more</a>
+					<a class="btn btn-primary btn-lg" href="https://www.wikihow.com/Be-Popular" role="button">Learn more</a>
 				</p>
 			</div>
 			<div class="col-md-6">

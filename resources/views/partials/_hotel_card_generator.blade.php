@@ -29,29 +29,33 @@
 					</ul>
 				</div>
 			</div>
-			<div class="card-body">
-				<a class="card-link dropdown-toggle" href="#collapseReservation{{ $hotel->id }}" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">Show more</a>
+			<div class="d-flex">
+			   <div class="card-body d-flex row">
+				
 				@if(Auth::check())
-					<form action="{{ route('reservations.show', $hotel->id)}}" method="get">
-	          <button class="btn btn-link card-link" type="submit">
+				<div class="col-5"><form action="{{ route('reservations.show', $hotel->id)}}" method="get">
+	            <button class="btn btn-link card-link border border: light bg-primary text-light w-100" type="submit">
 	          	Book now
-	        	</button>
-	        </form>
-	      @endif
-	      @if(Auth::check() && (Auth::user()->admin))
-					<form action="{{ route('hotels.edit', $hotel->id)}}" method="get">
-	          <button class="btn btn-link card-link" type="submit">
+	        	</button></div>	
+	            @endif
+	            @if(Auth::check() && (Auth::user()->admin))
+					<div class="col-3"><form class="but" action="{{ route('hotels.edit', $hotel->id)}}" method="get">
+	            <button class="btn btn-link card-link border border: light bg-success text-light w-100 " type="submit">
 	          	Edit
-	        	</button>
-	        </form>
-					<form action="{{ route('hotels.destroy', $hotel->id)}}" method="post">
-	          @csrf
-	          @method('DELETE')
-	          <button class="btn btn-link card-link" type="submit">
+	        	</button></div>
+	             </form>
+					<div class="col-4"><form class="but" action="{{ route('hotels.destroy', $hotel->id)}}" method="post">
+	            @csrf
+	             @method('DELETE')
+	            <button class="btn btn-link card-link border border: light bg-danger text-light w-100" type="submit">
 	          	Delete
-	          </button>
-	        </form>
-	      @endif
+	            </button></div>
+	           </form>
+	            @endif
+	          <div><a class="card-link dropdown-toggle" href="#collapseReservation{{ $hotel->id }}" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">Show more</a>
+	           </div>
+	    </div>
+	    
 			</div>
 		</div>
 	</div>

@@ -1,9 +1,20 @@
-<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-    <div class="container">
-        <a class="navbar-brand" href="{{ URL::route('/') }}">Our Hotel Name</a>
+<div class="header"><nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+    <div class="container flex-wrap">
+        <div class="mr-2">
+            <a class="navbar-brand" href="{{ URL::route('/') }}">
+                <div class=" d-flex ro ">
+                <div class="col-6" >
+                    <img class="logo"src="https://i.pinimg.com/originals/f7/b4/9f/f7b49fc1b3317d25f716d5caaf0df671.png">
+                </div>
+                <div class="col-6" >
+                    Dirty bits
+                </div>
+                </div>
+            </a>
         <button class="navbar-toggler active" type="button" data-toggle="collapse" data-target="#navbarContent">
         <span class="navbar-toggler-icon"></span>
         </button>
+        </div>
         <div class="collapse navbar-collapse float-right" id="navbarContent">
             <!-- Left Side Of Navbar -->
             <ul class="nav navbar-nav navbar-right">
@@ -58,3 +69,4 @@
         </div>
     </div>
 </nav>
+</div>
