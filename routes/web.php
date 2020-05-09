@@ -16,23 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/about', function () {
     return view('pages.about');
 })->name('about');
-Route::get('/create', function () {
-    return view('pages.create');
-})->name('create');
-Route::get('/my-reservations', function () {
-    return view('pages.myReservations');
-})->name('my-reservations');
-Route::get('/reservation-details', function () {
-    return view('pages.reservationDetails');
-})->name('reservation-details');
 Route::get('/error', function () {
     return view('pages.error');
 })->name('error');
 Route::resource('hotels', 'HotelController');
 Route::resource('reservations', 'ReservationController');
-Route::get('/find', [
-	'uses' => 'HotelController@find',
-	'as' => 'find',
-]);
+Route::get('/find',['uses' => 'HotelController@find','as' => 'find',]);
 Auth::routes();
 Route::get('/', 'HomeController@index')->name('/');
+Route::get('/create', 'HotelController@create')->name('create');
