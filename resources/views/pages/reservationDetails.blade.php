@@ -11,6 +11,9 @@
 			<form method="post" action="{{ route('reservations.store') }}">
 				@csrf
 				<div class="card card-body">
+					<div class="row justify-content-center mb-2 mt-2">
+						<input type="button" id="hotel_name" class="form-control w-50" value="{{ $hotel->name }}" name="hotel_name" read only data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="collapseHotelInfo collapseReservationImage">
+					</div>
 					<div class="row">
 						<div class="col-md-6 col-sm-6">
 							<label for="inputFrom">From</label>

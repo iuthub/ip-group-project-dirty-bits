@@ -19,7 +19,8 @@ class ReservationTableSeeder extends Seeder
       'persons' => 3,
       'room_num' => 2,
       'room_id' => 1,
-      'user_id' => 1
+      'user_id' => 1,
+      'hotel_name' => 'Hiyatt'
       ]);
 
       Reservation::create([
@@ -28,7 +29,8 @@ class ReservationTableSeeder extends Seeder
       'persons' => 2,
       'room_num' => 1,
       'room_id' => 2,
-      'user_id' => 2
+      'user_id' => 2,
+      'hotel_name' => 'Rixos'
       ]);
 
       Reservation::create([
@@ -37,7 +39,8 @@ class ReservationTableSeeder extends Seeder
       'persons' => 1,
       'room_num' => 2,
       'room_id' => 3,
-      'user_id' => 3
+      'user_id' => 3,
+      'hotel_name' => 'Bukhara'
       ]);
 
       Reservation::create([
@@ -46,7 +49,8 @@ class ReservationTableSeeder extends Seeder
       'persons' => 4,
       'room_num' => 1,
       'room_id' => 3,
-      'user_id' => 4
+      'user_id' => 4,
+      'hotel_name' => 'Hiyatt'
       ]);
     }
 }
