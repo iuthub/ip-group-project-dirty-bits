@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+<title>Hotels</title>
 <!-- Hotels' List -->
 <div class="wrapper container">
 	<div class="text-center mb-3">
