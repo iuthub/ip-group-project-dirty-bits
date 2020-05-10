@@ -13,7 +13,11 @@
 	<div class="row centered">
 		<div class="col-md-4 mb-2">
 			<div class="card limited">
+<<<<<<< HEAD
 				<img src="https://www.littlehotelier.com/wp-content/uploads/2016/03/tripadvisor-tripconnect-instant-booking-for-small-hotels.jpg" class="card-img-top" alt="...">
+=======
+				<div class="p-3"><img src="https://q-cf.bstatic.com/images/hotel/max1024x768/227/227030896.jpg" class="card-img-top" alt="..."></div>
+>>>>>>> origin/master
 				<div class="card-body">
 					<h4 class="card-title limited">Flexible Change and Cancellation</h4>
 					<p class="card-text">Guided by Booking Uz’s purpose of care, our temporary changes allow for flexibility in your upcoming travel. Book and Cancel as You wish!</p>
@@ -22,7 +26,13 @@
 		</div>
 		<div class="col-md-4 mb-2">
 			<div class="card limited">
+<<<<<<< HEAD
 				<img src="https://i.ytimg.com/vi/aRuW-cAOP88/maxresdefault.jpg" class="card-img-top" alt="...">
+=======
+				<div class="p-3">
+				<img src="https://q-cf.bstatic.com/images/hotel/max1024x768/224/22443294.jpg" class="card-img-top" alt="...">
+			</div>
+>>>>>>> origin/master
 				<div class="card-body">
 					<h4 class="card-title limited">Websites's Admin Membership</h4>
 					<p class="card-text">The Admin extension of Booking Uz program alows you to create, modify and delete hotel with proper notifications. Admin gives You all power, enjoy it!</p>
@@ -31,7 +41,12 @@
 		</div>
 		<div class="col-md-4 mb-2">
 			<div class="card limited">
+<<<<<<< HEAD
 				<img src="https://www.cediweb.ch/wp-content/uploads/2017/02/responsive-cediweb-1024x670.png" class="card-img-top" alt="...">
+=======
+				<div class="p-3">
+				<img src="https://storage.googleapis.com/static-content-hc/sites/default/files/cataloina_porto_doble_balcon2_2.jpg" class="card-img-top" alt="..."></div>
+>>>>>>> origin/master
 				<div class="card-body">
 					<h4 class="card-title limited">Manage Your Stay from Mobile</h4>
 					<p class="card-text">The Booking Uz's app lets members book, modify and manage stays with ease from mobile - everything is just a tap away. We made it adaptive!</p>
