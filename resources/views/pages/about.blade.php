@@ -2,18 +2,15 @@
 <title>About</title>
 @section('content')
 <div class="container wrapper">
-	<div class="container-fluid">
-		<img src="https://images.squarespace-cdn.com/content/v1/571fd16a2eeb818946dd69bc/1524859077601-1KZUZ3LYBSYBGIAS6AR6/ke17ZwdGBToddI8pDm48kKp-j4Y7usviUHM84CP5xykUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKc9id68ACPh8uSEU4s3d56puG21gnbeYsdaDHel6baV-XbRUaJ30JOieFWjhd813wZ/Teal_Gate_Studio_Creative+Portrait+%282+of+2%29.jpg?format=1500w" class="img-fluid" alt="Responsive image">
-	</div>
-	<div class="jumbotron mt-4">
+	<div class="jumbotron">
 		<div class="row">
 			<div class="col-md-6">
 				<h1 class="display-4">We are Family!</h1>
-				<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint delectus rerum vero, porro, recusandae necessitatibus.</p>
+				<p class="lead">Program developed by Dirty Bits Team in Github communicating, reviewing opponents code, with night long discussions.</p>
 				<hr class="my-4">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, aliquid.</p>
+				<p>We depeloped our program with love! </p>
 				<p class="lead">
-					<a class="btn btn-primary btn-lg" href="{{ route('error') }}" role="button">Learn more</a>
+					<a class="btn btn-info btn-lg" href="https://github.com/iuthub/ip-group-project-dirty-bits" role="button">Learn more</a>
 				</p>
 			</div>
 			<div class="col-md-6">
@@ -28,11 +25,11 @@
 			</div>
 			<div class="col-md-6">
 				<h1 class="display-4">Everyone Matters!</h1>
-				<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint delectus rerum vero, porro, recusandae necessitatibus.</p>
+				<p class="lead">Our team fully appreciate contribution of each member and hope in near future Dirty Bits Team will delight you with new products.</p>
 				<hr class="my-4">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, aliquid.</p>
+				<p>Developed by friendly team!</p>
 				<p class="lead">
-					<a class="btn btn-primary btn-lg" href="{{ route('error') }}" role="button">Learn more</a>
+					<a class="btn btn-info btn-lg" href="https://github.com/iuthub/ip-group-project-dirty-bits/graphs/contributors" role="button">Learn more</a>
 				</p>
 			</div>
 		</div>
@@ -41,11 +38,11 @@
 		<div class="row">
 			<div class="col-md-6">
 				<h1 class="display-4">Find Your Place!</h1>
-				<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint delectus rerum vero, porro, recusandae necessitatibus.</p>
+				<p class="lead">Our Dirty Bits Team is ready to cooperate with other teams and welcome to joining our team new members.</p>
 				<hr class="my-4">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, aliquid.</p>
+				<p>Please contact us for further details.</p>
 				<p class="lead">
-					<a class="btn btn-primary btn-lg" href="{{ route('error') }}" role="button">Learn more</a>
+					<a class="btn btn-info btn-lg" href="https://github.com/iuthub/ip-group-project-dirty-bits" role="button">Learn more</a>
 				</p>
 			</div>
 			<div class="col-md-6">

@@ -12,7 +12,7 @@
 				<input type="date" class="form-control" value="2020-04-29" name="to">
 			</div>
 			<div class="col-md-2 mb-3">
-				<button class="btn btn-primary" type="submit">Find Hotels</button>
+				<button class="btn btn-secondary" type="submit">Find Hotels</button>
 			</div>
 		</div>
 	</form>

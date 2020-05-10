@@ -73,7 +73,7 @@
 			</div>
 		</div>
 		<div class="text-center">
-			<button type="submit" class="btn btn-primary btn-lg w-50">Save Changes</button>
+			<button type="submit" class="btn btn-info btn-lg w-50">Save Changes</button>
 		</div>
 	</form>
 </div>

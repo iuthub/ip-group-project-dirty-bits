@@ -12,7 +12,7 @@
 				@csrf
 				<div class="card card-body">
 					<div class="row justify-content-center mb-2 mt-2">
-						<input type="text button" class="form-control w-50" value="{{ $hotel->name }}" name="hotel_name" read only data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="collapseHotelInfo collapseReservationImage" readonly>
+						<input type="text button" class="btn btn-info w-50" value="{{ $hotel->name }}" name="hotel_name" read only data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="collapseHotelInfo collapseReservationImage" readonly>
 					</div>
 					<div class="row">
 						<div class="col-md-6 col-sm-6">
@@ -49,8 +49,8 @@
 					</div>
 				</div>
 				<div class="text-center mt-3 mb-4">
-					<button type="submit" class="btn btn-primary w-50">Reserve</button>
-					<button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="collapseHotelInfo collapseReservationImage">Show Hotel</button>
+					<button type="submit" class="btn btn-success w-50">Reserve</button>
+					<button class="btn btn-info dropdown-toggle" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="collapseHotelInfo collapseReservationImage">Show Hotel</button>
 				</div>
 			</form>
 		</div>
@@ -87,7 +87,9 @@
 						</div>
 					</div>
 					<div class="card-body">
-						<a class="card-link dropdown-toggle" href="#collapseHotelInfoMore" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">Show more</a>
+                        <div class="container mb-3">
+                            <a class="card-link btn btn-info dropdown-toggle w-100" href="#collapseHotelInfoMore" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">Show more</a>
+                        </div>
 					</div>
 				</div>
 			</div>

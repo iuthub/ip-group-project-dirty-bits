@@ -1,5 +1,5 @@
 @foreach($hotels as $hotel)
-	<div class="col-lg-6 col-xl-4 limited d-flex align-items-stretch mb-2">
+	<div class="col-lg-6 col-xl-4 limited mb-2">
 		<div class="card">
 			<img style="width: 100%; height: 300px; object-fit: cover;" src="@include('partials.images.link_'. rand(1,10))" class="card-img-top" alt="...">
 			<div class="card-body">
@@ -29,30 +29,38 @@
 					</ul>
 				</div>
 			</div>
-			<div class="card-body">
-				<a class="card-link dropdown-toggle" href="#collapseReservation{{ $hotel->id }}" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">Show more</a>
-				@if(Auth::check())
-					<form action="{{ route('reservations.show', $hotel->id)}}" method="get">
-	          <button class="btn btn-link card-link" type="submit">
-	          	Book now
-	        	</button>
-	        </form>
-	      @endif
-	      @if(Auth::check() && (Auth::user()->admin))
-					<form action="{{ route('hotels.edit', $hotel->id)}}" method="get">
-	          <button class="btn btn-link card-link" type="submit">
-	          	Edit
-	        	</button>
-	        </form>
-					<form action="{{ route('hotels.destroy', $hotel->id)}}" method="post">
-	          @csrf
-	          @method('DELETE')
-	          <button class="btn btn-link card-link" type="submit">
-	          	Delete
-	          </button>
-	        </form>
-	      @endif
-			</div>
+			<div class="card-body row">
+                @if(Auth::check())
+                    <div class="col-5">
+                        <form action="{{ route('reservations.show', $hotel->id)}}" class="w-100" method="get">
+                            <button class="btn btn-success card-link w-100" type="submit">
+                                Book now
+                            </button>
+                        </form>
+                    </div>
+                @endif
+	            @if(Auth::check() && (Auth::user()->admin))
+                    <div class="col-3">
+                        <form action="{{ route('hotels.edit', $hotel->id)}}" class="w-100" method="get">
+                            <button class="btn btn-secondary card-link w-100" type="submit">
+                                Edit
+                            </button>
+                        </form>
+                    </div>
+                    <div class="col-4">
+                        <form action="{{ route('hotels.destroy', $hotel->id)}}" class="w-100" method="post">
+                            @csrf
+                            @method('DELETE')
+                            <button class="btn btn-danger card-link w-100" type="submit">
+                                Delete
+                            </button>
+                        </form>
+        	        </div>
+        	    @endif
+            </div>
+            <div class="container mb-3">
+                <a class="card-link btn btn-info dropdown-toggle w-100" href="#collapseReservation{{ $hotel->id }}" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">Show more</a>
+            </div>
 		</div>
 	</div>
 @endforeach
